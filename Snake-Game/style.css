@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+
+
+/* Tutorial: https://youtu.be/Sl6YUIvwbAk */
+
+
+*{
+    font-family: 'Silkscreen', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #13171D;
+}
+.container{
+    position: relative;
+    color: white;
+}
+#canvas{
+    border: 2px solid rgb(207, 235, 244);
+    box-shadow: 0 0 10px rgb(91, 199, 223);
+}
+.container .score{
+    position: absolute;
+    top: 0;
+    left: 12px;
+    font-size: 40px;
+}
+.container .menu{
+    border: 2px solid white;
+    background-color: rgb(0, 0, 0,0.5);
+    border-radius: 8px;
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.container .menu h2{
+    font-size: 70px;
+}
+.container .characters{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+#snake-1, #snake-2{
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#snake-1:hover, #snake-2:hover{
+    background-color: rgb(255, 255, 255,0.1);
+}
+.container .menu p{
+    font-size: 15px;
+    animation: parpadeo 1s infinite;
+}
+@keyframes parpadeo{
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
